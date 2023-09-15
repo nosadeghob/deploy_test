@@ -9,6 +9,39 @@ from sklearn                 import preprocessing, svm
 from sklearn.linear_model    import LinearRegression
 from sklearn.model_selection import train_test_split
 
+########################## FOOTER    
+
+footer="""<style>
+a:link , a:visited{
+color: blue;
+background-color: transparent;
+text-decoration: underline;
+}
+
+a:hover,  a:active {
+color: red;
+background-color: transparent;
+text-decoration: underline;
+}
+
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: white;
+color: black;
+text-align: center;
+}
+</style>
+<div class="footer">
+<p>Developed by <a style='display: block; text-align: center;' href="https://github.com/nosadeghob" target="_blank">Mohammad sadegh Eftekhar</a></p>
+</div>
+"""
+st.markdown(footer,unsafe_allow_html=True)
+
+###################################
+
 st.markdown("<h1 style='text-align: center; color: white;'>Stock Price Prediction</h1>", unsafe_allow_html=True)
 st.set_option('deprecation.showPyplotGlobalUse', False)
 #st.title('Stock Price Prediction')
@@ -263,34 +296,3 @@ plt.plot(df['Forecast_svm'], 'g')
 plt.legend(['linear regression', 'Support Vector Regression'], loc ="lower right")
 st.pyplot()
 #st.pyplot(fig)
-    
-#########################################    
-
-footer="""<style>
-a:link , a:visited{
-color: blue;
-background-color: transparent;
-text-decoration: underline;
-}
-
-a:hover,  a:active {
-color: red;
-background-color: transparent;
-text-decoration: underline;
-}
-
-.footer {
-position: fixed;
-left: 0;
-bottom: 0;
-width: 100%;
-background-color: white;
-color: black;
-text-align: center;
-}
-</style>
-<div class="footer">
-<p>Developed by <a style='display: block; text-align: center;' href="https://github.com/nosadeghob" target="_blank">Mohammad sadegh Eftekhar</a></p>
-</div>
-"""
-st.markdown(footer,unsafe_allow_html=True)
